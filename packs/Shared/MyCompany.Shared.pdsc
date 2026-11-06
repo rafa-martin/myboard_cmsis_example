@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package schemaVersion="1.7.7">
+  <vendor>MyCompany</vendor>
+  <name>Shared</name>
+  <description>Modulo de parametros compartido</description>
+  <releases>
+    <release version="1.0.0">Version inicial</release>
+  </releases>
+
+  <components>
+    <component Cclass="Utility" Cgroup="Params" Cversion="1.0.0">
+      <description>Pagina de parametros A/B</description>
+
+      <RTE_Components_h>
+        #define RTE_UTILITY_PARAMS           /* Params module */
+      </RTE_Components_h>
+
+      <Pre_Include_Global_h>
+        #define PARAMS_PRESENT  1
+      </Pre_Include_Global_h>
+
+      <files>
+        <file category="include" name="inc/"/>
+        <file category="header"  name="inc/params.h"/>
+        <file category="sourceC" name="src/params.c"/>
+        <file category="header"  name="config/params_cfg.h" attr="config" version="1.0.0"/>
+      </files>
+    </component>
+  </components>
+</package>

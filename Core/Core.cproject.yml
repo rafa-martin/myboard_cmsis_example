@@ -4,11 +4,11 @@ project:
     - ./inc
 
   # ERROR
-  # setups:
-  #   - setup: Options for STM32CubeMX
-  #     misc:
-  #       - C-CPP:
-  #           - '@./compiler_args.txt'
+  setups:
+    - setup: Options for STM32CubeMX
+      misc:
+        - C-CPP:
+            - '@./compiler_args.txt'
 
   # WORKS
   # misc:
@@ -19,12 +19,18 @@ project:
     - group: Source Files
       files:
         - file: ./main.c
+      add-path:
+        - ./inc
 
   # List components to use for your application.
   # A software component is a re-usable unit that may be configurable.
   components:
     - component: ARM::CMSIS:CORE
     - component: Device:CubeMX
+    - component: MyCompany::Utility:Params
+
+  layers:
+    - layer: ../Shared/Shared.clayer.yml
 
   # List executable file formats to be generated.
   output:

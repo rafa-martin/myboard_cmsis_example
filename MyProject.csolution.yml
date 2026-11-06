@@ -22,6 +22,8 @@ solution:
   packs:
     - pack: Keil::STM32H7xx_DFP
     - pack: ARM::CMSIS
+    - pack: MyCompany::Shared
+      path: ./packs/Shared
 
   # List different hardware targets that are used to deploy the solution.
   target-types:
@@ -49,3 +51,4 @@ solution:
   projects:
     - project: Core/Core.cproject.yml
   compiler: AC6
+

@@ -1,0 +1,13 @@
+layer:
+  type: Shared
+  description: Mapa de memoria, API boot<->app y gestión de parámetros
+
+  add-path:
+    - ./inc                      # relativo a este fichero .clayer.yml
+
+  groups:
+    - group: HelloWorld
+      files:
+        - file: ./inc/memory_map.h
+        - file: ./src/crc32.c
+

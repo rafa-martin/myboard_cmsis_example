@@ -1,0 +1,10 @@
+CompileFlags:
+  CompilationDatabase: c:\Users\marti\Workspaces\ARM\MyProject\out\Core\MyBoard\Release
+
+---
+If:
+  PathMatch: .*\.(c|C|h)$
+CompileFlags:
+  Add:
+    - -include
+    - c:\Users\marti\Workspaces\ARM\MyProject\out\Core\MyBoard\Release\compile_macros_c.h

@@ -1,0 +1,20 @@
+build-idx:
+  generated-by: csolution version 2.15.1+p3-gf46d68bf
+  target: MyBoard@Release
+  cdefault: ${CMSIS_COMPILER_ROOT}/cdefault.yml
+  csolution: MyProject.csolution.yml
+  cbuild-run: out/MyProject+MyBoard.cbuild-run.yml
+  tmpdir: tmp/MyBoard/Release
+  cprojects:
+    - cproject: Core/Core.cproject.yml
+  cbuilds:
+    - cbuild: out/Core/MyBoard/Release/Core.Release+MyBoard.cbuild.yml
+      project: Core
+      configuration: .Release+MyBoard
+      clayers:
+        - clayer: STM32CubeMX/MyBoard/Core.cgen.yml
+      messages:
+        info:
+          - MyProject.cbuild-pack.yml - file is already up-to-date
+          - MyProject+MyBoard.cbuild-run.yml - file generated successfully
+          - Core.Release+MyBoard.cbuild.yml - file is already up-to-date
